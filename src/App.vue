@@ -1,6 +1,8 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div>
+      <img alt="Vue logo" src="./assets/logo.png">
+      <HelloWorld msg="Welcome to Your Vue.js App"/>
+    </div>
 </template>
 
 <script>
@@ -10,6 +12,15 @@ export default {
   name: 'App',
   components: {
     HelloWorld
+  },
+  data() {
+    return {
+
+    }
+  },
+  created() {
+    console.log(this.$store)
+    this.$store.commit("storeUser")
   }
 }
 </script>
