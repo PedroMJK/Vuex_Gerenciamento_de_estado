@@ -48,12 +48,16 @@ export default {
     console.log("Esse vem do store", this.$store) // Store
 
     // O segundo parâmetro será o dado que  vai ser atualizado.
-    // const newUser = {
-    //   first_name: "Michael",
-    //   last_name: "Johnson",
-    //   email: "MikeJH@email.com"
-    // }
+    const newUser = {
+      first_name: "Michael",
+      last_name: "Johnson",
+      email: "MikeJH@email.com"
+    }
     // console.log("Esse vem da mutation", this.$store.commit("storeUser", newUser))
+
+    this.$store.dispatch('storeUser', newUser).then(() => {
+      console.log("Finalizou com sucesso!")
+    })
   }
 }
 </script>

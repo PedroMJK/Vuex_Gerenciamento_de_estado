@@ -1,6 +1,7 @@
 // O state é o local centralizado onde os dados reativos da aplicação são armazenados e compartilhados entre componentes.
 // Uma mutation serve para modificar o estado (state) de forma síncrona dentro da store.
 // Uma action serve para lidar com operações assíncronas e para comitar mutations que alteram o estado.
+    // (É um conjunto de funções, assim como as mutations)
 // Os getters servem para computar e retornar valores derivados do estado de forma reativa e reutilizável.
 // Os modules servem para organizar o estado e a lógica em módulos independentes, facilitando a escalabilidade da store em aplicações grandes.
 
@@ -59,7 +60,17 @@ export default createStore({
     }
   },
   actions: {
+    storeUser({commit}, data) {
+      return new Promise((resolve) => {
+        setTimeout(() => {
+          commit('storeUser', data);
+          resolve()
+          console.log("here");
+        }, 3000)
+      }) 
+    } 
   },
+
   modules: {
   }
 })
