@@ -35,6 +35,9 @@ export default createStore({
     shoppingCart: []
   },
   getters: {
+    total(state) {
+      return state.shoppingCart.reduce((acc, curr) => acc += curr.price, 0)
+    }
   },
   mutations: {
     storeUser(state, data) {

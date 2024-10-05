@@ -3,7 +3,10 @@
 
       <img alt="Vue logo" src="./assets/logo.png"> <br>
 
-        <AppAllProducts />
+        <!-- Para exibir o valor da soma dos produtos  -->
+        {{ $store.getters.total }}
+
+        <ProductList />
         <button  @click="updateUser()">
           Atualizar Perfil
         </button>
@@ -14,13 +17,13 @@
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
-import AppAllProducts from './components/Products/ProductList.vue';
+import ProductList from './components/Products/ProductList.vue';
 
 export default {
   name: 'App',
   components: {
     HelloWorld,
-    AppAllProducts,
+    ProductList,
   },
   data() {
     return {
