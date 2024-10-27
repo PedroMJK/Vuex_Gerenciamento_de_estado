@@ -1,6 +1,9 @@
 # app
 
+Este projeto utiliza Vuex para gerenciar o estado de uma aplicação de e-commerce, permitindo a gestão de usuários, produtos e um carrinho de compras com funcionalidades de adicionar, remover produtos e calcular o total.
+
 ## Project setup
+
 ```
 npm install
 ```
